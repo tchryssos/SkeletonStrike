@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { VrButton, View, Text, StyleSheet, VrSoundEffects, asset } from 'react-vr'
 
 export default class StartButton extends React.Component {
@@ -57,4 +57,9 @@ export default class StartButton extends React.Component {
 			</View>
     )
 	}
+}
+
+StartButton.propTypes = {
+	started: PropTypes.bool,
+	startGame: PropTypes.func,
 }

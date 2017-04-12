@@ -1,18 +1,13 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { Sound, asset } from 'react-vr'
 
 export default class ThemeMusic extends React.Component {
 
-	constructor(props) {
-		super(props)
-	}
-
 	get volume() {
 		if (!this.props.victory) {
 			return 1
-		} else {
-			return 0
 		}
+		return 0
 	}
 
 	render() {
@@ -24,6 +19,10 @@ export default class ThemeMusic extends React.Component {
 				loop
 				volume={this.volume}
 			/>
-    )
+		)
 	}
+}
+
+ThemeMusic.propTypes = {
+	victory: PropTypes.bool,
 }
