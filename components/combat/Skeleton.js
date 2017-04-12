@@ -53,6 +53,6 @@ export default class Skeleton extends React.Component {
 }
 
 Skeleton.propTypes = {
-	location: PropTypes.obj,
+	location: PropTypes.number,
 	death: PropTypes.func,
 }
